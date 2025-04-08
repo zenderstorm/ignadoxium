@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href='https://fonts.googleapis.com/css2?family=BIZ+UDMincho' rel='stylesheet'>
+<link href="https://fonts.googleapis.com/css2?family=Concert+One" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Supermercado+One" rel="stylesheet">
+
+
+<style>
+* {box-sizing: border-box;}
+
+  /* LAYOUT */
+.establishing {
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  max-width: device-width;
+  overflow:hidden;
+
+}
+
+.bgstars {
+  position: absolute;
+  z-index: -2;
+  left: 0;
+  top: 0;
+  width: 50%;
+  max-width: device-width;
+  overflow:hidden;
+}
+
+.clickfleyzkiya {
+  position: absolute;
+  z-index: 0;
+  width: 6.3vw;
+  height: 4vw;
+  left: 30.5vw;
+  top: 29.5vw;
+  cursor: pointer;
+}
+
+.return {
+  position: absolute;
+  z-index: 1;
+  left: 6vw;
+  top: 0;
+  max-width: 16vw;
+  max-height: 9vw;
+}
+
+
+
+  /* BLACK SCREEN */
+.bscreen {
+  width: 100%;
+  max-width: device-width;
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  animation-name: fadeIn;
+  animation-duration: 3s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
+
+  /* CONTEXT BOXES */
+
+.return .contextboxreturn {
+  visibility: hidden;
+  background-color: rgba(0,0,0,1);
+  font-family: 'BIZ UDMincho';
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 5;
+  font-size: 10px;
+  white-space: nowrap;
+}
+.return:hover .contextboxreturn {
+  visibility: visible;
+}
+
+.contextlaules {  
+  display: inline;
+}
+.contextboxlaules {
+  visibility: hidden;
+  background-color: rgba(0,0,0,1);
+  font-family: 'BIZ UDMincho';
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 4;
+  font-size: 1vw;
+  white-space: nowrap;
+
+}
+  
+.contextlaules:hover .contextboxlaules {
+  visibility: visible
+}
+
+
+  /* DIALOG FORMATS */
+  
+.standard{
+  text-align: center;
+  font-family: 'BIZ UDMincho';
+  color: #f1f1f1; 
+  font-size: 1vw;
+  margin-bottom: 1vw;
+}
+
+.fleyz {
+  text-align: right;
+  font-family: 'Concert One';
+  color: #0; 
+  background: #f1b86d;
+  background-image: url(https://i.ibb.co/SXxDPwn0/744ce25007e33c5bed14db46c62d2fda.gif);
+  background-blend-mode: soft-light;
+  background-repeat: no-repeat;
+  background-size: 50vw 50vw;
+  border-radius: 1vw;
+  border-width: 0.1vw;
+  border-color: #ffae3b;
+  border-style: solid;
+  padding: 0.7vw;
+  margin-bottom: 1vw;
+}
+
+.kiya {
+  text-align: left;
+  font-family: 'Supermercado One';
+  color: #0; 
+  background: #e3b5f5;
+  background-blend-mode: soft-light;
+  background-image: url(https://i.ibb.co/Q3k2xDGN/0d7ae8de480d9fdba2be992987c616e3.gif);
+  background-repeat: no-repeat;
+  background-size: 45vw 25vw;
+  border-radius: 1vw;
+  border-width: 0.1vw;
+  border-color: #a992ff;
+  border-style: solid;  
+  padding: 0.7vw;
+  margin-bottom: 1vw;
+}
+
+  /* MAIN PANELS */
+  
+.panel1 {
+  width: 55vw;
+
+  position: absolute;
+  z-index:3;
+  animation-name: fadeOut;
+  animation-duration: 0.2s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
+#panel1 { 
+  transition: .3s ease;
+  
+  max-width: device-width;
+  display: none;
+  left: 40vw;
+  top: 5vw;
+  right: 5vw;
+  position: absolute;
+  
+  display: none;
+}
+
+#dialog1 { 
+  font-size: 1.1vw;
+  z-index: 7;
+
+  max-width: device-width;
+  display: none;
+  left: 47vw;
+  top: 30vw;
+  right: 12vw;
+  bottom: 1vw;
+  position: absolute;
+  
+  display: none;
+  overflow: auto;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+ /* ATS */
+ 
+@keyframes fadeIn {
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+
+ 
+@keyframes fadeOut {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1
+    }
+}
+
+
+
+
+</style>
+</head>
+<body>
+<div class="return" >
+  <a href="https://sites.google.com/view/ignadoxium/landing">
+      <img src="https://i.ibb.co/1G8SR4XL/transparent-attempt.png" class="return">
+      <span class="contextboxreturn"> [[ Return? ]] </span>
+  </a>
+</div>
+
+<div>
+  <img src="https://i.ibb.co/Zz5BC6h5/black-screen.jpg" class="bscreen"> 
+  <img src="https://i.ibb.co/20W53NRd/e447c5bdd414dce7b88d3bd7536c9f47.gif" class="bgstars"> 
+  <img src="https://i.ibb.co/ZpHvp7dY/somewhere-on-drechetta-transparent-stars-small.png" class="establishing">
+  <a onclick="shownarration1()">
+    <img src="https://i.ibb.co/1G8SR4XL/transparent-attempt.png" class="clickfleyzkiya">
+  </a>
+</div>
+
+<div id="panel1">
+  <img src="https://i.ibb.co/S4t0KrhG/kiya-flaze-1-1.png" class="panel1">
+</div>
+
+<div id="dialog1">
+  <div class="standard">
+  [[ Scroll ]]
+  </div>
+  <div class="fleyz">
+    Soooo what do you think?
+  </div>
+  <div class="kiya">
+    Remind me again why you brought me here?
+  </div>
+  <div class="fleyz">
+    Well, this pit is far away, hidden, <i>and probably abandoned.</i> Rumourtalk says a coupl'a people have <i>died</i> here. Isn't that exciting?!
+  </div>
+  <div class="kiya">
+    <i>"Died here"??</i>
+  </div>
+  <div class="fleyz">
+    Yeah!!
+  </div>
+  <div class="kiya">
+    Wellll then ...I <i>guess</i> so... but don't you think it's a bit too late for this?? Your moms are <i>definitely</i> going to snipe you for being offplanet!
+  </div>
+  <div class="fleyz">
+    No
+  </div>
+  <div class="kiya">
+    (And me too by mine!)
+  </div>
+  <div class="fleyz">
+    They don't know that
+  </div>
+  <div class="kiya">
+    Yeah, I sure hope so!
+  </div>
+  <div class="fleyz">
+    Listen - We're like each others' alibifolk. I'm at <i>your</i> place, and you're at <i>my</i> place. As long as we make it back to Exid by like what, 12? <i>Nobody</i> will be sniping us. 
+  </div>
+  <div class="kiya">
+    Yup, and this high-class defence plan that definitely does <b>not</b> hinge on our parents deciding to contact each other will work out splendtacularly. 
+  </div>
+<div class="kiya">
+    Now under <i>other</i> circumstantuations this would be normal and expected of us, given the gate 9 incident. 
+  </div>
+<div class="kiya">
+    But right now, we are <b>OFF PLANET!!!</b>
+  </div>
+  <div class="fleyz">
+    Hey Gate 9 was fun, don't act like it wasn't
+  </div>
+  <div class="fleyz">
+    Eitherways we don't have to explore EVERYTHING by morrow
+  </div>
+  <div class="fleyz">
+    But we STILL should satiate SOME quizzerosity
+  </div>
+  <div class="fleyz">
+    Is it not gnawing at you?!
+  </div>
+</div>
+
+<script>
+function shownarration1() {
+  var x = document.getElementById("panel1");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+  
+    var x = document.getElementById("dialog1");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+</script>
+</body>
+</html>
