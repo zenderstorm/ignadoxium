@@ -9,7 +9,7 @@
 
 <audio loop autoplay>
   <source src="https://github.com/zenderstorm/ignadoxium/blob/main/yelenskaupit.mp3?raw=true" type="audio/mpeg">
-  [[ If you are seeing this, your browser does not support the audio element. ]]
+  [ If you are seeing this, your browser does not support the audio element. ]
 </audio>
 
 <style>
@@ -17,6 +17,8 @@
 
 body {
   background-color: black;
+    overflow-y: hidden;
+
 }
   
   /* LAYOUT */
@@ -27,7 +29,7 @@ body {
   top: 0;
   width: 100%;
   max-width: device-width;
-  overflow:hidden;
+  overflow-y: hidden;
 }
 
 .bgstars {
@@ -37,7 +39,6 @@ body {
   top: 0;
   width: 50%;
   max-width: device-width;
-  overflow:hidden;
   display: none;  
 }
 
@@ -51,6 +52,16 @@ body {
   cursor: pointer;
 }
 
+.clickdent{
+  position: absolute;
+  z-index: 0;
+  width: 12vw;
+  height: 4vw;
+  left: 7.5vw;
+  top: 44.5vw;
+  cursor: pointer;
+}
+
 .return {
   position: absolute;
   z-index: 1;
@@ -58,6 +69,16 @@ body {
   top: 0;
   max-width: 16vw;
   max-height: 9vw;
+}
+
+.yelenskau {
+  position: absolute;
+  z-index: 1;
+  left: 8vw;
+  top: 8.5vw;
+  width: 2vw;
+  height: 1vw;
+  cursor: pointer
 }
 
 
@@ -96,6 +117,23 @@ body {
   visibility: visible;
 }
 
+.yelenskau .contextboxyelenskau {
+  visibility: hidden;
+  background-color: rgba(0,0,0,1);
+  font-family: 'BIZ UDMincho';
+  position: absolute;
+  color: #fff;
+  text-align: left;
+  top: 7vw;
+  padding: 7px;
+  z-index: 5;
+  font-size: 10px;
+  white-space: nowrap;
+  text-decoration: none;
+}
+.yelenskau:hover .contextboxyelenskau {
+  visibility: visible;
+}
 
 .clickpanel1 .contextboxpanel1 {
   visibility: hidden;
@@ -115,6 +153,27 @@ body {
 .clickpanel1:hover .contextboxpanel1 {
   visibility: visible;
 }
+
+.clickpanel2 .contextboxpanel2 {
+  visibility: hidden;
+  background-color: rgba(0,0,0,1);
+  font-family: 'BIZ UDMincho';
+  color: #fff;
+  text-align: right;
+  left: 12.5vw;
+  top: 42.5vw;
+  padding: 7px;
+  z-index: 5;
+  position: absolute;
+  font-size: 10px;
+  white-space: nowrap;
+} 
+
+.clickpanel2:hover .contextboxpanel2 {
+  visibility: visible;
+}
+
+/* below --> idk what this is for bruh */
 
 .contextlaules {  
   display: inline;
@@ -144,7 +203,11 @@ body {
   color: #f1f1f1; 
   font-size: 1vw;
   margin-bottom: 1vw;
+}
 
+.tagora {
+  font-family: 'Concert One';
+  font-size: 0.7vw;
 }
 
 .fleyz {
@@ -167,6 +230,7 @@ body {
 .kiya {
   text-align: left;
   font-family: 'Supermercado One';
+  font-kerning: auto;
   color: #0; 
   background: #e3b5f5;
   background-blend-mode: soft-light;
@@ -223,6 +287,22 @@ body {
   overflow: auto;
 }
 
+#dialog2 { 
+  font-size: 1.1vw;
+  z-index: 7;
+
+  max-width: device-width;
+  display: none;
+  left: 57vw;    
+  right: 7vw;
+  top: 3vw;
+  bottom: 5vh;
+  position: absolute;
+  
+  display: none;
+  overflow: auto;
+}
+
 ::-webkit-scrollbar {
   width: 0px;
 }
@@ -262,14 +342,34 @@ body {
   </a>
 </div>
 
+<div class="yelenskau" >
+      <img src="https://github.com/zenderstorm/ignadoxium/blob/main/transparent.png?raw=true" class="yelenskau">
+      <span class="contextboxyelenskau"> 
+      [ Yelenskau. ]
+      <br><i>How far from home were you?</i>
+      <div class="tagora">
+      <i><b><br>I felt megaannums away. But I knew the stars were<wbr> familiar. Sorry, I can barely recall.</b></i>
+      </div>
+      </span>
+
+</div>
+
 <div>
   <img src="https://github.com/zenderstorm/ignadoxium/blob/main/blackscreen.jpg?raw=true" class="bscreen"> 
   <img src="https://github.com/zenderstorm/ignadoxium/blob/main/smallstars.gif?raw=true" class="bgstars"> 
   <img src="https://github.com/zenderstorm/ignadoxium/blob/main/somewhere-on-yelenskau.jpg?raw=true" class="establishing">
-  <div class="clickpanel1">
+
+<div class="clickpanel1">
   <a onclick="shownarration1()">
     <img src="https://github.com/zenderstorm/ignadoxium/blob/main/transparent.png?raw=true" class="clickfleyzkiya">
     <span class="contextboxpanel1"> [[ ... ]] </span>
+  </a>
+  </div>
+  
+<div class="clickpanel2">
+  <a onclick="shownarration2()">
+    <img src="https://github.com/zenderstorm/ignadoxium/blob/main/transparent.png?raw=true" class="clickdent">
+    <span class="contextboxpanel2"> [[ ... ]] </span>
   </a>
   </div>
 </div>
@@ -280,7 +380,9 @@ body {
 
 <div id="dialog1">
   <div class="standard"> 
-  [[ Scroll ]]
+  <span>
+  [ 1 ] <br> <br> <i>Scroll</i>
+  </span>
   </div>
   <div class="kiya"> 
 Fleyz
@@ -297,15 +399,15 @@ Bringing me to the pit of squarism and nothing
   </div>
 
 <div class="fleyz">
-???
+??? 
   </div>
 
 <div class="fleyz">
-HOW dare
-  </div>
+Why do you strike with mockery 
+</div>
 
 <div class="fleyz">
-You don’t see the clear killdelight??
+You don’t see a sheer killdelight??
   </div>
 
 <div class="kiya">
@@ -321,19 +423,19 @@ Saysee this
   </div>
 
 <div class="kiya">
-Merrydown runs near, we still remain offplanet, and I now must view a pit that tries pathetically to sell me its abyss
+Merrydown runs rampant, we appear stuck offplanet, and I now must view a pit that boasts an uncomfortobscure abyss
   </div>
 
 <div class="kiya">
-You foresaid “killdelight”? 
+And you foresaid “killdelight”? 
   </div>
 
 <div class="kiya">
-Where here are the kills do we delight from? 
+Where here are the kills we delight from? 
   </div>
 
 <div class="kiya">
-Aslumber runs rampant with the urge to cut
+Exaspernoyance runs rampant with the urge to engulf!
   </div>
 
 <div class="fleyz">
@@ -345,7 +447,7 @@ I stand to speak more
   </div>
 
 <div class="fleyz">
-You’re from planet falsewrong
+Yetwith you oft send regards from planet falsewrong
   </div>
 
 <div class="kiya">
@@ -353,19 +455,27 @@ You’re from planet falsewrong
   </div>
 
 <div class="fleyz">
-<i>Speak less</i>
-  </div>
+Don't care speak less
+</div>
+
+<div class="kiya">
+Wow
+</div>
 
 <div class="fleyz">
 Aforesaid “killdelight” reigns from the <i>everdeath</i> of many here
   </div>
-
+  
 <div class="fleyz">
 Why would I bring us to venture without a promise?
   </div>
 
 <div class="kiya">
-You say <i>everdeath?</i>
+...
+</div>
+
+<div class="kiya">
+You say... <i>everdeath?</i>
   </div>
 
 <div class="fleyz">
@@ -409,12 +519,13 @@ Too does <i>your mothers’ cuisinism</i> await!
   </div>
 
 <div class="kiya">
-We should return, to planet Exid, fore any inklethought slips yours’ or mines’ minds–
+We should onventure, <i>to planet Exid,</i> fore any inklethought slips yours’ or mines’ minds–
   </div>
 
 <div class="fleyz">
-Enough!
-  </div>
+??? 
+<span class="standard">
+[Noise] </span>  </div>
 
 <div class="fleyz">
 Sets upon sets you and I struck past boundarfences, threatening our presence to allthings beyond
@@ -469,19 +580,19 @@ What weakspit <i>you!</i>
   </div>
 
 <div class="kiya">
-!?!?
-  </div>
+What!  
+</div>
 
 <div class="kiya">
 DAREKILL you!
   </div>
 
 <div class="fleyz">
-What, has your quizzerosity cowered away?
+By Kyurie, has your quizzerosity cowered away?
   </div>
 
 <div class="fleyz">
-What be should our mothers know? I stand that they had many interventures in their twodays!
+What be should our mothers know? I stand that they too had many interventures in their twodays!
 </div>
 
 <div class="fleyz">
@@ -556,7 +667,7 @@ KILLPLEASE Kiyah
 Saysee be glad you prance with such perslysive speeches
   </div>
 
-<div class="fleyz">
+<div class="fleyz"> 
 Heh
   </div>
 
@@ -575,8 +686,246 @@ But killme
 <div class="kiya">
 I kyupray this emerges victorious with worth
   </div>
+  
+<div class="fleyz">
+It will
 </div>
 
+<div class="kiya">
+It must  </div>
+
+<div class="kiya">
+Fore our inanemad descent, I deem we look roundplace
+</div>
+
+<div class="fleyz">
+Should that aidhelp you
+</div>
+
+<div class="kiya">
+Speak less
+</div>
+
+<div class="kiya">
+Should we be repremonished, I rather killknow of this place than not</div>
+
+</div>
+
+
+<div id="dialog2">
+  <div class="standard"> 
+[ 2 ]  </div>
+  
+<div class="kiya"> 
+Oh
+  </div>
+
+<div class="kiya">
+My mother journs with these, I press
+  </div>
+
+<div class="fleyz">
+Which?
+  </div>
+
+<div class="kiya">
+These sinkcircles before us
+  </div>
+
+<div class="fleyz">
+No
+  </div>
+
+<div class="fleyz">
+Which mother
+  </div>
+
+<div class="kiya">
+...
+  </div>
+
+<div class="kiya">
+Zelastri
+  </div>
+
+<div class="fleyz">
+That of the golden tattoos?
+  </div>
+
+<div class="kiya">
+Yes
+  </div>
+
+<div class="fleyz">
+Do press
+  </div>
+
+<div class="kiya"> 
+Saysee she has told me a minute amount, only as for passing
+  </div>
+
+<div class="kiya">
+Should someone seekmust a buildstruct victorious against planetary rumbleshrieks,
+  </div>
+
+<div class="kiya">
+They compress the roof, all throughout, to the bottom.
+  </div>
+
+<div class="kiya">
+She deems it is to force the centre to be everrigid.
+  </div>
+
+<div class="fleyz">
+Intertriguing...
+  </div>
+
+<div class="fleyz">
+But why retain these peculiodar... dentspots?
+  </div>
+
+<div class="kiya">
+Uhhh
+  </div>
+
+<div class="kiya">
+That one I do not know
+  </div>
+
+<div class="kiya">
+Yetwith she has said journing with these boasts great killstrength 
+  </div>
+
+<div class="kiya">
+Specificespecially in the thruxes Hyumys and Gavan
+</div>
+
+<div class="fleyz">
+Hmm
+</div>
+
+<div class="fleyz">
+She praises herself
+  </div>
+
+<div class="kiya">
+Oft she does, we killknow this
+  </div>
+
+<div class="fleyz">
+Saysee
+  </div>
+
+<div class="fleyz">
+Against its slightic killstrength I am recalless for what Hyumys or Gavan perform
+  </div>
+
+<div class="kiya">
+Uhhh
+  </div>
+
+<div class="kiya">
+Density and Gravity, I press
+  </div>
+
+<div class="fleyz">
+Ohh, then I too press
+  </div>
+
+<div class="fleyz">
+I recall onething of "gravity"  </div>
+
+<div class="kiya">
+Do speak
+  </div>
+
+<div class="fleyz">
+I have heard, from my mother,
+</div>
+
+<div class="kiya">
+Which
+  </div>
+
+<div class="fleyz">
+Heh
+</div>
+
+<div class="fleyz">
+Viridianne
+</div>
+
+<div class="kiya">
+That of?
+</div>
+
+<div class="fleyz">
+The plants
+</div>
+
+<div class="kiya">
+Hm
+</div>
+
+<div class="fleyz">
+She deems Gavan to be a thrux of great versadextility
+</div>
+
+<div class="fleyz">
+"Learn it," she oft urgespeaks, 
+</div>
+
+<div class="fleyz">
+"your twos are when you must vie for thruxes that desire great intriconcentration. 
+</div>
+
+<div class="fleyz">
+The earlier you learn, the killbetter"</div>
+
+<div class="kiya">
+Truly?</div>
+
+<div class="fleyz">
+Yes</div>
+
+<div class="kiya">
+Intertriguing how you manage recallism of such longspeak
+</div>
+
+<div class="fleyz">
+What
+</div>
+
+<div class="kiya">
+What</div>
+
+<div class="fleyz">
+...
+</div>
+
+<div class="fleyz">
+By merriment,</div>
+
+<div class="fleyz">
+I yetwith see none of mine perform even a minute spin of Gavan
+</div>
+
+<div class="kiya">
+Uhhh</div>
+
+<div class="kiya">
+
+Saysee that mightmeans they had not learnt it in their twos
+</div>
+
+<div class="kiya">
+Now they urgewarn you of the seekmust</div>
+
+<div class="fleyz">
+True
+</div>
+
+  
 <script>
 function shownarration1() {
   var x = document.getElementById("panel1");
@@ -591,6 +940,33 @@ function shownarration1() {
     x.style.display = "none";
   } else {
     x.style.display = "block";
+  }
+  
+    var x =
+document.getElementById("dialog2");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  }
+}
+
+function shownarration2() {
+    var x = document.getElementById("dialog2");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+  
+  var x =
+document.getElementById("dialog1");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+}
+
+  var x =
+document.getElementById("panel1");
+  if (x.style.display === "block") {
+    x.style.display = "none";
   }
 }
 </script>
