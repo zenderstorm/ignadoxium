@@ -8,19 +8,50 @@
 a:link {text-decoration:none;}
 a:visited {text-decoration:none;}
 body {background-color:#F7F7F7; overflow-x:hidden;text-decoration:none;}
+
+/*-------- FORMAT -------- */
 .header {font-family: "Archivo Narrow"; font-weight: 900; sans-serif; letter-spacing:-1.4vw; line-height:12vw; font-size:17vw; position:absolute;}
+
 .paragraph {font-family: "BIZ UDMincho"; letter-spacing:9px; line-height:17px; font-size:17px;}
-.navigation-box {position:absolute;border:solid #303030 1.7px;margin:17px; padding-bottom:20px;padding-top:20px;padding-left:40px;padding-right:40px;}
-.navigation-box:hover {background-color:#303030;color:#F7F7F7;transition:linear 0.07s;}
+
+.navigation-box {position:absolute;border:solid #303030 1.7px;margin:17px; padding-bottom:20px;padding-top:20px;padding-left:40px;padding-right:40px;cursor:pointer;}
+.navigation-box:hover {font-weight: 900; background-color:#303030;color:#F7F7F7;transition:linear 0.07s;}
+
+.navigation-cfm{position:absolute;font-weight: 900; background-color:#303030;color:#F7F7F7;border:solid #303030 1.7px;margin:17px; padding-bottom:20px;padding-top:20px;padding-left:40px;padding-right:40px;cursor:pointer;}
+
+#dedicate-cfm {position:absolute; display:none;}
+#credits {position:absolute; display:block;}
+
+#navigation-cfm {display:none;}
+
 </style>
 </head>
 
 <body>
 	<div class="header" style="color:#303030;top:-0.9vw;left:-1vw;">IGNADOXIUM</div>
 
-	<div class="paragraph navigation-box" style="right:0vw;bottom:0vw;">[[ DEDICATE ]]</div>
+	<a onclick="dedicate1()">
+	<div class="paragraph navigation-box" style="right:0vw;bottom:0vw;z-index:5;">[[ DEDICATE ]]</div>
+	</a>
+    
+	<div id="navigation-cfm" class="paragraph navigation-cfm" style="right:0vw;bottom:0vw;z-index:7;">[[ DEDICATE ]]</div>
 
-	<div class="paragraph" style="margin:7px; margin-bottom:14px; position:absolute; bottom:0vw;">
+	<div id="dedicate-cfm" class="paragraph" style="padding:12px;position:absolute; max-width:400px; right:0vw; bottom:78px;margin:17px; background-color:#303030;color:#F7F7F7;">
+    <div style="text-align:right;">
+    <i>LGN : <b>0/1</b><br>
+    LKL : 1/1<br>
+    ATR-ID : "ZND"<br>
+    ATR-CF : <b>0/1</b><br>
+    </i><br>
+    </div>
+    <div style="text-align:center;">
+    CONFIRM [[ DEDICATE ]]<br><br>
+ 	</div>   
+    <div style="text-align:left;">
+    ATR-CF is absent. Psiographic content has not been reviewed. [[ DISENGAGE ]] is always available, but [[ DEDICATE ]] is an irreversible action.</div>
+    </div>
+	
+	<div id="credits" class="paragraph" style="margin:7px; margin-bottom:14px; position:absolute; bottom:0vw; color:#303030;z-index:3;">
     	<span>
         LANDING PAGE<br>
         <a href="https://www.instagram.com/ignadoxium" style="color:#303030" target="_blank">IGNADOXIUM</a> BY <a href="https://www.instagram.com/zenderstorm" target="_blank" style="color:#303030">ZENDERSTORM</a><br>
@@ -30,3 +61,28 @@ body {background-color:#F7F7F7; overflow-x:hidden;text-decoration:none;}
 
 </body>
 </html> 
+
+<script>
+function dedicate1() {
+  var x = document.getElementById("dedicate-cfm");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "block";
+  }
+  
+  var x = document.getElementById("credits");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "none";
+  }
+  
+  var x = document.getElementById("navigation-cfm");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "block";
+  }
+}    
+</script>
